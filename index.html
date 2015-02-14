@@ -1,15 +1,57 @@
 <!doctype html>
-<html ng-app>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>nik</title>
+    <script src="angular.js"></script>
+    <script src="invoice1.js"></script>
   </head>
-  <body>
+  
+  <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
     <div>
       <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <input type="text" ng-model="invoice.yourName" placeholder="Enter a name here">
       <hr>
-      <h1>Hello {{yourName}}!</h1>
+      <h1>Hello {{invoice.yourName}}!</h1>
     </div>
-    <a href="https://github.com/narchontis/Test"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-  </body>
+
+    <a href="https://github.com/narchontis/Test">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" 
+      src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  
+    <b>Invoice:</b>
+    <div>
+      Quantity: <input type="number" ng-model="invoice.qty" required >
+    </div>
+    <div>
+      Costs: <input type="number" ng-model="invoice.cost" required >
+    </div>
+    
+<table>
+<tbody ng-repeat="curr in currencies">
+<tr>
+<td>{{invoice.total(curr)}}</td>
+</tr>
+<tr>
+<td>{{item.description}}</td>
+</tr>
+</tbody>
+</table>
+  
+      
+      <button class="btn" ng-click="invoice.pay()">Pay</button>
+
+      
+    
+<div ng-controller="HomeCtrl">
+  <div class="motherBox" ng-repeat="n in news">
+    <div class="childBox" class="col-md-{{getRandomSpan()}} box">
+      <a href="#" class="thumbnail">
+        <img src="{{holderLink}}" height="200px" alt="100x100">
+        <p class="tBlock"> {{n.title}} </p>
+      </a>  
+    </div>
+  </div>
+</div>
+  </div>
 </html>
