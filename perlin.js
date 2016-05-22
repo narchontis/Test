@@ -1,10 +1,10 @@
 var bubbles = [];
-var BALLOUNES = 10;
+var BALLOUNES = 1;
 function setup() {
-   createCanvas(1200, 800);
+   createCanvas(600, 400);
    for (var i = 0; i < BALLOUNES; i++) {
      var x = random(width);
-     var y = random(height);
+     var y = height / 2;
      bubbles.push(new Bubble(x,y));
    }
    print("Theo is having some fun.");
@@ -18,8 +18,9 @@ function mousePressed(){
 
 function draw() {
   background(0);
+
   for (var i = 0; i < bubbles.length; i++) {
-    bubbles[i].move();
+    bubbles[i].noiseX();
     bubbles[i].display();
   }
 
