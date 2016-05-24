@@ -1,20 +1,24 @@
 function Bubble(x,y) {
   this.x = x;
   this.y = y;
+  this.lifespan = 255;
   this.t = 0;
 
 //  this.color = color(255,100);
   this.color = color(random(0,255),random(0,255), random(0,255));
 
   this.display = function(){
-    stroke(255);
-    fill(this.color);
+    //stroke(255);
+    noStroke()
+    fill(255, this.lifespan);
+    //fill(this.color);
     ellipse(this.x, this.y, 48, 48);
   }
 
   this.move = function(){
     this.x += random(-1, 1);
     this.y += random(-1, 1);
+    this.lifespan = this.lifespan - 1;
   }
 
   this.moveX = function(){
