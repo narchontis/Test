@@ -1,6 +1,6 @@
 Quick setup — if you've done this kind of thing before
 
- touch README.md
+touch README.md
 git init
 git add README.md
 git commit -m "first commit"
