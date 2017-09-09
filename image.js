@@ -1,6 +1,10 @@
 var coinImage = new Image();
 coinImage.src = "images/coinsprite.png";
 
+var Img = {};
+Img.player = new Image();
+Img.player.src = "images/enemy.png"
+
 
 function sprite (options) {
 
@@ -12,7 +16,6 @@ function sprite (options) {
     that.image = options.image;
 
     return that;
-}
 
 that.render = function () {
 
@@ -28,6 +31,8 @@ that.render = function () {
            that.width,
            that.height);
     };
+}
+
 var coin = sprite({
     context: canvas.getContext("2d"),
     width: 100,
@@ -38,8 +43,3 @@ var coin = sprite({
 var canvas = document.getElementById("coinAnimation");
 canvas.width = 100;
 canvas.height = 100;
-
-
-var Img = {};
-Img.player = new Image();
-Img.player.src = "images/"

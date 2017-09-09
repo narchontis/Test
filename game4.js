@@ -1,4 +1,4 @@
-var ctx = document.getElementById("ctx4").getContext("2d");
+var ctx = document.getElementById("ctx").getContext("2d");
 ctx.font = '30px Arial';
 
 var HEIGHT = 500;
@@ -192,7 +192,6 @@ document.onclick = function(mouse){
 }
 
 document.onmousemove = function(mouse){
-        /*
         var mouseX = mouse.clientX - document.getElementById('ctx').getBoundingClientRect().left;
         var mouseY = mouse.clientY - document.getElementById('ctx').getBoundingClientRect().top;
 
@@ -207,7 +206,6 @@ document.onmousemove = function(mouse){
 
         player.x = mouseX;
         player.y = mouseY;
-        */
 }
 
 document.onkeydown = function(event){
