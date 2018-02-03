@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Testing project with jest and configuring CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narchontis/Test.git"
+  },
+  "keywords": [
+    "test",
+    "CI"
+  ],
+  "author": "Nick Archontis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narchontis/Test/issues"
+  },
+  "homepage": "https://github.com/narchontis/Test#readme",
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
+}
