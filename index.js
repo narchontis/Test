@@ -1,10 +1,16 @@
-
-function sum(a,b) {
+//This is addition
+function sum(a, b) {
   return a + b;
 }
 
-function subs(a, b){
+//This is substraction
+function subs(a, b) {
   return a - b;
 }
 
-module.exports = { sum, subs }  ;
+//Time to multiply
+function mult(a, b) {
+  return a * b;
+}
+
+module.exports = { sum, subs, mult };
