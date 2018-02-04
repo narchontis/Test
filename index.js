@@ -13,4 +13,13 @@ function mult(a, b) {
   return a * b;
 }
 
-module.exports = { sum, subs, mult };
+//Let's divide
+function mod(a,b) {
+  if (b !== 0){
+    console.log("Div, ", a%b);
+    return a % b;
+  }
+  else
+    throw error;
+}
+module.exports = { sum, subs, mult, mod };
