@@ -15,3 +15,7 @@ test("mult 5 * 4 to equal 20", () => {
 test("mod 20 % 4 to equal 0", () => {
   expect(mod(20, 4)).toBe(0);
 });
+
+test("mod 21 % 4 to equal 1", () => {
+  expect(mod(21, 4)).toBe(1);
+});
